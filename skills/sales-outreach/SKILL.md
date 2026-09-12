@@ -336,16 +336,14 @@ Subject B: [A/B variant]
 ```
 
 **Case study selection criteria:**
-- Same industry or adjacent industry as the prospect
-- Similar company size (within 2x)
-- Similar stage or growth trajectory
-- Specific metrics (not vague "improved efficiency")
-- Recent (within last 12 months)
+- If `enerasoft/COMPANY-CONTEXT.md` exists, select the matching case study from its table by vertical (Education → StudyMate, SaaS → ReviewAI, eCommerce/Insurance-adjacent → QuoteGuard, Healthcare/Enterprise → Lifecarte) and use its exact metric — never alter the number or invent a fifth case study.
+- Otherwise: same industry or adjacent industry as the prospect, similar company size (within 2x), similar stage or growth trajectory, specific metrics (not vague "improved efficiency"), recent (within last 12 months).
 
 **If you do not have a matching case study:**
 - Use an industry benchmark or research finding
 - Reference a general pattern you have observed
 - Share a relevant third-party case study
+- Say so explicitly rather than stretching an unrelated case study to fit
 
 ### Email 4 — The Different Angle (Day 14)
 
@@ -802,6 +800,7 @@ Full sequence saved to: OUTREACH-SEQUENCE.md
 
 ## Cross-Skill Integration
 
+- If `enerasoft/COMPANY-CONTEXT.md` exists, use it as the source of truth for the seller's services, differentiators, and case studies (see Case study selection criteria above) — sign emails as "The Enerasoft Team" (hello@enerasoft.com) unless a specific sender is given
 - If `COMPANY-RESEARCH.md` exists, use company data for personalization and context
 - If `DECISION-MAKERS.md` exists, use contact profiles and personalization anchors
 - If `LEAD-QUALIFICATION.md` exists, use pain points and buying signals for messaging

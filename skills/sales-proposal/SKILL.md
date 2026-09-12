@@ -37,6 +37,7 @@ Collect the following information. If not provided by the user, ask for each ite
 
 Before asking the user for inputs, check for existing analysis files in the working directory:
 
+- **enerasoft/COMPANY-CONTEXT.md**: If exists, use it to fill in the seller's own services (item 4), engagement differentiators, and case studies (item 8) — pick the case study matching the client's vertical per its table, and never invent one outside it. This is the seller's data, not the client's, so it never counts toward "required inputs" the user must supply.
 - **PROSPECT-ANALYSIS.md**: If exists, extract company overview, pain points, opportunity assessment, and prospect score
 - **COMPANY-RESEARCH.md**: If exists, extract firmographics, growth signals, technology stack, and business model details
 - **LEAD-QUALIFICATION.md**: If exists, extract BANT/MEDDIC qualification data, budget signals, decision timeline, and authority mapping
@@ -620,7 +621,7 @@ CONFIDENTIAL
 6. **Be specific.** "We will increase your revenue" is meaningless. "We project a 25-35% increase in qualified pipeline within 90 days based on results with [comparable client]" is credible.
 7. **Three-tier pricing is mandatory.** Always provide three options. The middle tier is where you want them. The top tier makes the middle look reasonable. The bottom tier exists as a fallback.
 8. **Include exclusions.** A proposal without exclusions invites scope creep. Be explicit about what is NOT included.
-9. **Case studies must be relevant.** Irrelevant case studies are worse than none. Match the client's industry, size, or challenge as closely as possible.
-10. **If previous analysis files exist**, incorporate all available data. Do not ask the user to repeat information already captured in PROSPECT-ANALYSIS.md, COMPANY-RESEARCH.md, LEAD-QUALIFICATION.md, COMPETITIVE-INTEL.md, or other output files.
+9. **Case studies must be relevant.** Irrelevant case studies are worse than none. Match the client's industry, size, or challenge as closely as possible. If `enerasoft/COMPANY-CONTEXT.md` exists, only use case studies from its table, matched by vertical — never invent one or alter its metric.
+10. **If previous analysis files exist**, incorporate all available data. Do not ask the user to repeat information already captured in `enerasoft/COMPANY-CONTEXT.md`, PROSPECT-ANALYSIS.md, COMPANY-RESEARCH.md, LEAD-QUALIFICATION.md, COMPETITIVE-INTEL.md, or other output files.
 11. **Follow-up emails are part of the proposal output.** Always generate the 6-email follow-up sequence alongside the proposal — proposal delivery without a follow-up plan is incomplete.
 12. **Conservative projections build trust.** In the ROI section, the conservative estimate should be genuinely conservative. Overpromising destroys credibility when results come in.

@@ -3,6 +3,8 @@
 > Professional client proposal template with all 11 sections.
 > Customize all [PLACEHOLDER] fields for each prospect.
 
+**Seller defaults:** unless a project-specific sender is given, fill `[YOUR_COMPANY_NAME]` = Enerasoft, `[YOUR_NAME]` / `[YOUR_TITLE]` = "The Enerasoft Team", and pull the Case Studies section, differentiators, and service scope from `enerasoft/COMPANY-CONTEXT.md` — select the case study matching the client's vertical, never a fabricated one.
+
 ---
 
 ## 1. Cover Page

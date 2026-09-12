@@ -22,6 +22,12 @@ try:
 except ImportError:
     pass
 
+try:
+    import certifi
+    _CAFILE = certifi.where()
+except ImportError:
+    _CAFILE = None
+
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
@@ -71,9 +77,7 @@ BUYING_ROLES = {
 
 def fetch_url(url, timeout=10):
     """Fetch a URL and return (status, html). Returns (None, None) on failure."""
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
+    ctx = ssl.create_default_context(cafile=_CAFILE)
     headers = {"User-Agent": "Mozilla/5.0 (compatible; ContactFinder/1.0)"}
     req = Request(url, headers=headers)
     try:

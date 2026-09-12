@@ -38,6 +38,8 @@ When the user invokes `/sales icp <description>`, follow this process:
 
 ### Step 1: Parse the Business Description
 
+If `/sales icp` is invoked with no description (or a very short one) and `enerasoft/COMPANY-CONTEXT.md` exists in the working directory, use that file as the business description input instead of asking the user to repeat it.
+
 Extract from the user's description:
 - What the product/service does
 - Who it's currently sold to (if mentioned)

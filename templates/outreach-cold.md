@@ -3,6 +3,8 @@
 > A structured 5-email cold outreach sequence with integrated LinkedIn touchpoints.
 > Replace all [PLACEHOLDER] fields with prospect-specific information.
 
+**Seller defaults:** unless a project-specific sender is given, fill `[YOUR_COMPANY]` = Enerasoft, `[YOUR_NAME]` = "The Enerasoft Team", `[YOUR_EMAIL]` = hello@enerasoft.com. Pull `[ONE_PROOF_POINT]` and social-proof examples from `enerasoft/COMPANY-CONTEXT.md` (differentiators + the case study matching the prospect's vertical) rather than inventing generic numbers.
+
 ---
 
 ## Timeline Overview
