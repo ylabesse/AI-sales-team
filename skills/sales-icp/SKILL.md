@@ -1,3 +1,8 @@
+---
+name: sales-icp
+description: Ideal Customer Profile builder — defines ideal customer attributes, pain points, and targeting criteria
+---
+
 # Ideal Customer Profile Builder
 
 ## Metadata

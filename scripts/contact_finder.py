@@ -202,18 +202,25 @@ def extract_card_people(html):
 def extract_list_people(html):
     """Extract people from structured lists."""
     people = []
+    # Find all <li>...</li> blocks first (bounded, no exponential backtracking)
     li_pattern = re.compile(
-        r'<li[^>]*>.*?'
-        r'([A-Z][\w\s.\'-]{1,40})\s*[-,|:]\s*([\w\s,&/\'-]{3,80})'
-        r'.*?</li>',
-        re.IGNORECASE | re.DOTALL,
+        r'<li[^>]*>(.*?)</li>',
+        re.IGNORECASE | re.DOTALL
     )
-    for m in li_pattern.finditer(html):
-        name = _clean_text(m.group(1))
-        title = _clean_text(m.group(2))
-        if _is_valid_person(name, title):
-            linkedin = _find_nearby_linkedin(html, m.start(), m.end())
-            people.append({"name": name, "title": title, "linkedin": linkedin})
+    for li_match in li_pattern.finditer(html):
+        li_content = li_match.group(1)
+        # Within this li block, find name:separator:title
+        m = re.search(
+            r"([A-Z][\w\s.&\\-]{1,40})\s*[-,|:]"
+            r"\s*([A-Z][\w\s,&/\-]{3,80})",
+            li_content
+        )
+        if m:
+            name = _clean_text(m.group(1))
+            title = _clean_text(m.group(2))
+            if _is_valid_person(name, title):
+                linkedin = _find_nearby_linkedin(html, li_match.start(), li_match.end())
+                people.append({"name": name, "title": title, "linkedin": linkedin})
     return people
 
 

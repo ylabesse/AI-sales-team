@@ -1,3 +1,8 @@
+---
+name: sales-report-pdf
+description: Sales pipeline report generator — professional PDF reports with score gauges, charts, and prospect cards
+---
+
 # Professional Sales Report PDF Generator
 
 ## Metadata

@@ -1,3 +1,8 @@
+---
+name: sales-report
+description: Sales pipeline report generator — Markdown pipeline view of all prospects
+---
+
 # Sales Pipeline Report Generator
 
 ## Metadata
